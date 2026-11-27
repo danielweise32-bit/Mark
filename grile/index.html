@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ro" data-theme="cream">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Teste grilă gratuite pentru Evaluarea Națională (clasa a VIII-a) și Bacalaureat, la toate materiile.">
+  <meta name="theme-color" content="#f7f1e8">
+  <title>Grila Mea</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Lora:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Aplică tema salvată înainte de afișare, ca să nu „clipească” pagina.
+    try {
+      var s = JSON.parse(localStorage.getItem('grila.settings') || '{}');
+      var t = s.theme || 'cream';
+      if (t === 'auto') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'cream';
+      document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#app">Sari la conținut</a>
+  <header class="topbar">
+    <a class="brand" href="#/">
+      <img src="icon.svg" alt="" width="34" height="34">
+      <span>Grila Mea</span>
+    </a>
+    <nav class="nav" aria-label="Navigare principală">
+      <a href="#/" data-nav="home"><span aria-hidden="true">🏠</span><b>Acasă</b></a>
+      <a href="#/mistakes" data-nav="mistakes"><span aria-hidden="true">🔁</span><b>Greșeli</b></a>
+      <a href="#/stats" data-nav="stats"><span aria-hidden="true">📊</span><b>Progres</b></a>
+      <a href="#/custom" data-nav="custom"><span aria-hidden="true">✏️</span><b>Grilele mele</b></a>
+      <a href="#/settings" data-nav="settings"><span aria-hidden="true">🎨</span><b>Personalizare</b></a>
+    </nav>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="foot">
+    Făcut cu răbdare pentru elevi · Datele tale rămân în acest browser
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="data-en.js"></script>
+  <script src="data-bac.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

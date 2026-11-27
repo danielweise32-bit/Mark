@@ -1,0 +1,338 @@
+// Grile pentru examenul de Bacalaureat (toate materiile).
+// Format întrebare: { q: enunț, o: [4 variante], a: indexul variantei corecte, e: explicație }
+(function (root) {
+  root.GRILE = root.GRILE || {};
+  root.GRILE.bac = {
+    id: 'bac',
+    name: 'Bacalaureat',
+    short: 'BAC',
+    subtitle: 'Clasele IX–XII',
+    icon: '🎓',
+    subjects: [
+      {
+        id: 'bac-romana', name: 'Limba și literatura română', icon: '📖', color: '#e07a5f',
+        questions: [
+          { q: 'Romanul „Ion” a fost scris de:', o: ['Liviu Rebreanu', 'Camil Petrescu', 'Marin Preda', 'George Călinescu'], a: 0, e: '„Ion” (1920), de Liviu Rebreanu, este un roman realist-obiectiv interbelic.' },
+          { q: '„Luceafărul” lui Mihai Eminescu este un:', o: ['basm cult', 'poem romantic', 'roman', 'pastel'], a: 1, e: '„Luceafărul” este un poem romantic, pe tema geniului și a iubirii imposibile.' },
+          { q: 'Romanul „Enigma Otiliei” aparține lui:', o: ['Mihail Sadoveanu', 'George Călinescu', 'Liviu Rebreanu', 'Camil Petrescu'], a: 1, e: 'George Călinescu – roman de tip balzacian, cu personajele Felix, Otilia, moș Costache.' },
+          { q: '„Ultima noapte de dragoste, întâia noapte de război” este un roman:', o: ['tradițional, obiectiv', 'modern, subiectiv', 'istoric', 'fantastic'], a: 1, e: 'Romanul lui Camil Petrescu are narator-personaj (Ștefan Gheorghidiu) și perspectivă subiectivă.' },
+          { q: 'Personajul Ștefan Gheorghidiu apare în opera:', o: ['„Enigma Otiliei”', '„Ion”', '„Ultima noapte de dragoste, întâia noapte de război”', '„Moromeții”'], a: 2, e: 'Ștefan Gheorghidiu este naratorul-personaj din romanul lui Camil Petrescu.' },
+          { q: 'Autorul romanului „Moromeții” este:', o: ['Marin Preda', 'Mihail Sadoveanu', 'Liviu Rebreanu', 'Ion Creangă'], a: 0, e: '„Moromeții” – Marin Preda; personaj principal: Ilie Moromete.' },
+          { q: 'Vitoria Lipan este personajul principal din:', o: ['„Baltagul”', '„Moara cu noroc”', '„Ion”', '„Maitreyi”'], a: 0, e: 'În „Baltagul” de Mihail Sadoveanu, Vitoria pornește în căutarea soțului ei, Nechifor Lipan.' },
+          { q: '„O scrisoare pierdută” de I. L. Caragiale este:', o: ['o tragedie', 'o comedie', 'o dramă istorică', 'o nuvelă'], a: 1, e: 'Este o comedie de moravuri politice, cu personaje ca Tipătescu, Cațavencu, Dandanache.' },
+          { q: 'Poezia „Plumb” de George Bacovia aparține curentului:', o: ['romantism', 'simbolism', 'tradiționalism', 'clasicism'], a: 1, e: 'Bacovia este cel mai important poet simbolist român.' },
+          { q: '„Eu nu strivesc corola de minuni a lumii” de Lucian Blaga este:', o: ['un pastel', 'o artă poetică modernistă', 'o fabulă', 'o baladă'], a: 1, e: 'Poezia deschide volumul „Poemele luminii” (1919) și exprimă concepția poetică a lui Blaga.' },
+          { q: 'Poezia „Testament” de Tudor Arghezi ilustrează conceptul de:', o: ['estetica urâtului', 'poezie populară', 'idilism pașoptist', 'pastel clasic'], a: 0, e: 'Arghezi introduce în poezie „estetica urâtului”: „Din bube, mucegaiuri și noroi / Iscat-am frumuseți și prețuri noi”.' },
+          { q: '„Riga Crypto și lapona Enigel” a fost scrisă de:', o: ['Ion Barbu', 'Nichita Stănescu', 'Lucian Blaga', 'Tudor Arghezi'], a: 0, e: 'Baladă cultă de Ion Barbu, care face parte din etapa baladică și orientală a creației sale.' },
+          { q: '„Leoaica tânără, iubirea” este o poezie neomodernistă scrisă de:', o: ['Marin Sorescu', 'Nichita Stănescu', 'Ion Barbu', 'Mihai Eminescu'], a: 1, e: 'Nichita Stănescu este principalul reprezentant al neomodernismului.' },
+          { q: 'Drama „Iona” de Marin Sorescu este o:', o: ['comedie de moravuri', 'parabolă dramatică', 'dramă istorică', 'tragedie antică'], a: 1, e: '„Iona” este o tragedie modernă / parabolă dramatică despre condiția omului.' },
+          { q: '„Povestea lui Harap-Alb” este un:', o: ['basm popular', 'basm cult', 'roman', 'mit'], a: 1, e: 'Basmul lui Ion Creangă are autor cunoscut, deci este basm cult.' },
+          { q: '„Moara cu noroc” de Ioan Slavici este o nuvelă:', o: ['istorică', 'psihologică, realistă', 'fantastică', 'romantică'], a: 1, e: 'Nuvelă realistă de analiză psihologică: dezumanizarea lui Ghiță sub influența lui Lică Sămădăul.' },
+          { q: '„Alexandru Lăpușneanul” de Costache Negruzzi este:', o: ['prima nuvelă istorică românească', 'un roman realist', 'o comedie', 'o poezie'], a: 0, e: 'Nuvela romantică istorică publicată în 1840 în „Dacia literară”.' },
+          { q: 'Societatea „Junimea” a fost condusă de:', o: ['Titu Maiorescu', 'Eugen Lovinescu', 'Mihail Kogălniceanu', 'Nichifor Crainic'], a: 0, e: 'Titu Maiorescu a fost mentorul „Junimii” (Iași, 1863) și al revistei „Convorbiri literare”.' },
+          { q: 'Cenaclul și revista „Sburătorul”, care au promovat modernismul, au fost conduse de:', o: ['Titu Maiorescu', 'Eugen Lovinescu', 'Nichifor Crainic', 'Garabet Ibrăileanu'], a: 1, e: 'Eugen Lovinescu este teoreticianul modernismului românesc interbelic.' },
+          { q: 'Incipitul romanului „Enigma Otiliei”, cu descrierea străzii și a casei lui moș Costache, ilustrează:', o: ['tehnica balzaciană', 'fluxul conștiinței', 'tehnica colajului', 'naratorul-personaj'], a: 0, e: 'Descrierea detaliată a cadrului care sugerează caracterul personajelor este specifică romanului balzacian.' },
+          { q: 'Simetria incipit–final („drumul”) apare în romanul:', o: ['„Ion”', '„Maitreyi”', '„Iona”', '„Plumb”'], a: 0, e: 'Romanul „Ion” începe și se încheie cu imaginea drumului: structură circulară.' },
+          { q: 'Ortograma corectă în enunțul „___ spus adevărul.” este:', o: ['Iam', 'I-am', 'Iam-', 'I am'], a: 1, e: 'Pronumele „i” + auxiliarul „am” se scriu legat cu cratimă: „i-am”.' },
+          { q: 'Sinonimul neologismului „a eluda” este:', o: ['a evita', 'a lămuri', 'a elogia', 'a amâna'], a: 0, e: '„A eluda” = a ocoli, a evita (o problemă, o lege).' },
+          { q: 'Forma corectă de plural a substantivului „chibrit” este:', o: ['chibrituri', 'chibriți', 'chibrite', 'chibrit'], a: 0, e: 'Conform DOOM: chibrit – chibrituri.' }
+        ]
+      },
+      {
+        id: 'bac-mate', name: 'Matematică', icon: '📐', color: '#3d85c6',
+        questions: [
+          { q: 'log₂ 8 este egal cu:', o: ['2', '3', '4', '8'], a: 1, e: '2³ = 8, deci log₂ 8 = 3.' },
+          { q: 'Suma primilor 10 termeni ai progresiei aritmetice cu a₁ = 1 și r = 2 este:', o: ['19', '55', '100', '110'], a: 2, e: 'a₁₀ = 1 + 9·2 = 19; S₁₀ = 10·(1 + 19)/2 = 100.' },
+          { q: 'Derivata funcției f(x) = x³ este:', o: ['x²', '3x²', '3x', 'x⁴/4'], a: 1, e: '(xⁿ)′ = n·xⁿ⁻¹, deci (x³)′ = 3x².' },
+          { q: '∫₀¹ 2x dx este egal cu:', o: ['0', '1', '2', '1/2'], a: 1, e: 'O primitivă este x²; x² de la 0 la 1 = 1 − 0 = 1.' },
+          { q: 'Combinări de 5 luate câte 2 (C₅²) este:', o: ['10', '20', '25', '5'], a: 0, e: 'C₅² = 5!/(2!·3!) = 10.' },
+          { q: 'Soluțiile ecuației x² − 5x + 6 = 0 sunt:', o: ['1 și 6', '2 și 3', '−2 și −3', '−1 și 6'], a: 1, e: 'Suma = 5, produsul = 6, deci x₁ = 2 și x₂ = 3.' },
+          { q: 'Determinantul matricei (2 1; 3 4) este:', o: ['5', '11', '8', '−5'], a: 0, e: 'det = 2·4 − 1·3 = 5.' },
+          { q: 'Pentru orice x real, sin²x + cos²x este egal cu:', o: ['0', '1', '2', 'sin 2x'], a: 1, e: 'Identitatea fundamentală a trigonometriei.' },
+          { q: 'lim (x → ∞) (2x + 1)/(x + 3) este:', o: ['0', '1/3', '2', '∞'], a: 2, e: 'Raportul coeficienților termenilor de grad maxim: 2/1 = 2.' },
+          { q: 'Într-o progresie geometrică cu b₁ = 3 și q = 2, termenul b₄ este:', o: ['12', '24', '48', '9'], a: 1, e: 'b₄ = b₁·q³ = 3·8 = 24.' },
+          { q: '5! este egal cu:', o: ['25', '60', '120', '720'], a: 2, e: '5! = 1·2·3·4·5 = 120.' },
+          { q: 'Distanța dintre punctele A(1, 2) și B(4, 6) este:', o: ['5', '7', '√7', '25'], a: 0, e: 'AB = √((4−1)² + (6−2)²) = √(9 + 16) = 5.' },
+          { q: 'Panta dreptei y = 3x − 2 este:', o: ['−2', '3', '1/3', '2/3'], a: 1, e: 'În forma y = mx + n, panta este m = 3.' },
+          { q: 'Aranjamente de 4 luate câte 2 (A₄²) este:', o: ['6', '8', '12', '16'], a: 2, e: 'A₄² = 4!/2! = 12.' },
+          { q: 'Soluția ecuației 2ˣ = 32 este:', o: ['4', '5', '6', '16'], a: 1, e: '32 = 2⁵, deci x = 5.' },
+          { q: 'Derivata funcției f(x) = eˣ este:', o: ['eˣ', 'x·eˣ⁻¹', 'ln x', '1/x'], a: 0, e: 'Funcția exponențială eˣ este egală cu derivata ei.' },
+          { q: 'Primitivele funcției f(x) = 1/x, pentru x > 0, sunt:', o: ['−1/x² + C', 'ln x + C', 'x + C', 'eˣ + C'], a: 1, e: '(ln x)′ = 1/x.' },
+          { q: 'sin 30° este egal cu:', o: ['1/2', '√2/2', '√3/2', '1'], a: 0, e: 'Valoare remarcabilă: sin 30° = 1/2.' },
+          { q: 'Vârful parabolei f(x) = x² − 4x + 3 este:', o: ['V(2, −1)', 'V(−2, 15)', 'V(4, 3)', 'V(1, 0)'], a: 0, e: 'x_V = −b/2a = 2; f(2) = 4 − 8 + 3 = −1.' },
+          { q: 'Numărul submulțimilor unei mulțimi cu 4 elemente este:', o: ['4', '8', '16', '24'], a: 2, e: 'O mulțime cu n elemente are 2ⁿ submulțimi: 2⁴ = 16.' },
+          { q: '(1 + i)² este egal cu:', o: ['2', '2i', '1 + i²', '0'], a: 1, e: '1 + 2i + i² = 1 + 2i − 1 = 2i.' },
+          { q: 'Produsul scalar al vectorilor u(1, 2) și v(3, −1) este:', o: ['1', '5', '−1', '7'], a: 0, e: 'u · v = 1·3 + 2·(−1) = 1.' },
+          { q: 'Funcția f(x) = x² − 2x este descrescătoare pe intervalul:', o: ['(−∞, 1]', '[1, ∞)', '(−∞, 0]', 'ℝ'], a: 0, e: 'f′(x) = 2x − 2 ≤ 0 pentru x ≤ 1.' },
+          { q: 'Elementul neutru al înmulțirii numerelor reale este:', o: ['0', '1', '−1', 'nu există'], a: 1, e: 'x · 1 = 1 · x = x pentru orice x real.' }
+        ]
+      },
+      {
+        id: 'bac-istorie', name: 'Istorie', icon: '🏛️', color: '#a0522d',
+        questions: [
+          { q: 'Unirea Moldovei cu Țara Românească sub Alexandru Ioan Cuza a avut loc în:', o: ['1848', '1859', '1866', '1918'], a: 1, e: 'Cuza a fost ales domn în Moldova (5 ianuarie) și în Țara Românească (24 ianuarie 1859).' },
+          { q: 'Marea Unire a fost proclamată la Alba Iulia pe:', o: ['24 ianuarie 1859', '9 mai 1877', '1 decembrie 1918', '23 august 1944'], a: 2, e: 'Adunarea Națională de la Alba Iulia a votat unirea Transilvaniei cu România la 1 decembrie 1918.' },
+          { q: 'Independența de stat a României a fost proclamată în Parlament pe:', o: ['9 mai 1877', '1 iulie 1866', '10 mai 1881', '27 martie 1918'], a: 0, e: 'Mihail Kogălniceanu a declarat independența la 9 mai 1877, în contextul războiului ruso-turc.' },
+          { q: 'Prima constituție a României moderne, adoptată fără acordul Puterilor Garante, este cea din:', o: ['1858', '1866', '1923', '1938'], a: 1, e: 'Constituția din 1866 a instituit monarhia constituțională și principiul separației puterilor.' },
+          { q: 'Primul principe străin al României, venit în 1866, a fost:', o: ['Ferdinand I', 'Carol I', 'Carol al II-lea', 'Mihai I'], a: 1, e: 'Carol de Hohenzollern-Sigmaringen a devenit domnitor în 1866 și rege în 1881.' },
+          { q: 'Regele României în momentul Marii Uniri era:', o: ['Carol I', 'Ferdinand I', 'Carol al II-lea', 'Mihai I'], a: 1, e: 'Ferdinand I „Întregitorul” (1914–1927); regina Maria.' },
+          { q: 'Constituția din 1923 este cunoscută pentru:', o: ['instaurarea regimului comunist', 'consolidarea democrației și a votului universal', 'instaurarea regimului autoritar', 'desființarea monarhiei'], a: 1, e: 'A consfințit statul național unitar și drepturile și libertățile democratice.' },
+          { q: 'Programul revoluției de la 1848 din Țara Românească a fost:', o: ['Proclamația de la Islaz', 'Petiția națională', 'Dorințele partidei naționale', 'Regulamentul Organic'], a: 0, e: 'Proclamația de la Islaz a fost citită pe 9 iunie 1848.' },
+          { q: 'Regele Mihai I a fost obligat să abdice pe:', o: ['23 august 1944', '30 decembrie 1947', '6 martie 1945', '22 decembrie 1989'], a: 1, e: 'Abdicarea forțată din 30 decembrie 1947 a dus la proclamarea Republicii Populare Române.' },
+          { q: 'România a devenit membră a NATO în anul:', o: ['1999', '2004', '2007', '2014'], a: 1, e: 'România a aderat la NATO în 2004 și la Uniunea Europeană în 2007.' },
+          { q: 'România a aderat la Uniunea Europeană la:', o: ['1 ianuarie 2004', '1 ianuarie 2007', '1 mai 2004', '1 ianuarie 2010'], a: 1, e: 'Aderarea la UE: 1 ianuarie 2007 (împreună cu Bulgaria).' },
+          { q: 'Regulamentele Organice au fost aplicate în Principate sub:', o: ['protectorat rusesc', 'ocupație austriacă', 'dominația otomană directă', 'administrație franceză'], a: 0, e: 'Au intrat în vigoare în 1831 (Țara Românească) și 1832 (Moldova), în timpul protectoratului Rusiei.' },
+          { q: 'Primul stat dac centralizat a fost condus de:', o: ['Decebal', 'Burebista', 'Dromichaites', 'Traian'], a: 1, e: 'Burebista (82–44 î.Hr.) a unificat triburile geto-dace.' },
+          { q: 'Prima unire politică a Țării Românești, Transilvaniei și Moldovei a fost realizată de:', o: ['Ștefan cel Mare', 'Mihai Viteazul', 'Vlad Țepeș', 'Iancu de Hunedoara'], a: 1, e: 'Mihai Viteazul, în anul 1600.' },
+          { q: 'Bătălia de la Vaslui (Podul Înalt), din 1475, a fost câștigată de:', o: ['Mircea cel Bătrân', 'Ștefan cel Mare', 'Mihai Viteazul', 'Vlad Țepeș'], a: 1, e: 'Ștefan cel Mare a învins armata otomană condusă de Soliman Pașa.' },
+          { q: 'Recunoașterea internațională a unirii Transilvaniei cu România s-a realizat prin tratatul de la:', o: ['Versailles', 'Trianon', 'Saint-Germain', 'Neuilly'], a: 1, e: 'Tratatul de la Trianon (4 iunie 1920), încheiat cu Ungaria.' },
+          { q: 'Colectivizarea agriculturii în România comunistă s-a desfășurat între:', o: ['1945–1947', '1949–1962', '1965–1971', '1980–1989'], a: 1, e: 'Procesul de colectivizare forțată a început în 1949 și s-a încheiat în 1962.' },
+          { q: 'Constituția României adoptată prin referendum în decembrie 1991 a consacrat:', o: ['republica socialistă', 'statul de drept, democratic și social', 'monarhia absolută', 'partidul unic'], a: 1, e: 'Constituția din 1991 (revizuită în 2003) definește România ca stat de drept, democratic și social.' },
+          { q: 'Organizația militară a statelor comuniste, înființată în 1955, a fost:', o: ['NATO', 'Tratatul de la Varșovia', 'CAER', 'Liga Națiunilor'], a: 1, e: 'Tratatul de la Varșovia a fost replica blocului sovietic la NATO (1949).' },
+          { q: 'Regimul comunist din România a căzut în urma revoluției din:', o: ['noiembrie 1987', 'decembrie 1989', 'iunie 1990', 'august 1968'], a: 1, e: 'Revoluția din decembrie 1989 a dus la căderea regimului Ceaușescu.' }
+        ]
+      },
+      {
+        id: 'bac-geografie', name: 'Geografie', icon: '🌍', color: '#2a9d8f',
+        questions: [
+          { q: 'Cel mai înalt vârf din România este:', o: ['Negoiu', 'Moldoveanu', 'Omu', 'Peleaga'], a: 1, e: 'Vârful Moldoveanu (2544 m), în Munții Făgăraș.' },
+          { q: 'Fluviul care formează cea mai mare parte a graniței de sud a României este:', o: ['Prutul', 'Dunărea', 'Mureșul', 'Oltul'], a: 1, e: 'Dunărea separă România de Bulgaria și, parțial, de Serbia.' },
+          { q: 'Delta Dunării se află în cea mai mare parte în județul:', o: ['Constanța', 'Tulcea', 'Galați', 'Brăila'], a: 1, e: 'Delta Dunării este situată în principal în județul Tulcea.' },
+          { q: 'Cea mai întinsă câmpie din România este:', o: ['Câmpia de Vest', 'Câmpia Română', 'Câmpia Moldovei', 'Câmpia Transilvaniei'], a: 1, e: 'Câmpia Română, situată în sudul țării.' },
+          { q: 'Lacul Sfânta Ana este un lac de origine:', o: ['glaciară', 'vulcanică', 'carstică', 'antropică'], a: 1, e: 'Este singurul lac vulcanic din România, situat într-un crater din Munții Ciomatu.' },
+          { q: 'Cel mai mare lac glaciar din România este:', o: ['Bâlea', 'Bucura', 'Zănoaga', 'Capra'], a: 1, e: 'Lacul Bucura, din Munții Retezat.' },
+          { q: 'Clima României este:', o: ['ecuatorială', 'temperat-continentală', 'mediteraneeană', 'polară'], a: 1, e: 'România are climă temperat-continentală, cu nuanțe regionale.' },
+          { q: 'Cei mai vechi munți de pe teritoriul României sunt:', o: ['Munții Făgăraș', 'Munții Măcinului', 'Munții Apuseni', 'Munții Bucegi'], a: 1, e: 'Munții Măcinului (Dobrogea) s-au format în orogeneza hercinică.' },
+          { q: 'Râul Mureș se varsă în:', o: ['Dunăre', 'Tisa', 'Prut', 'Olt'], a: 1, e: 'Mureșul se varsă în Tisa, pe teritoriul Ungariei.' },
+          { q: 'Cel mai mare port maritim al României este:', o: ['Mangalia', 'Constanța', 'Galați', 'Tulcea'], a: 1, e: 'Portul Constanța este cel mai mare port la Marea Neagră.' },
+          { q: 'Cel mai lung fluviu din Europa este:', o: ['Dunărea', 'Volga', 'Rinul', 'Nipru'], a: 1, e: 'Volga (aprox. 3530 km), care se varsă în Marea Caspică.' },
+          { q: 'Cel mai înalt vârf din Munții Alpi este:', o: ['Mont Blanc', 'Matterhorn', 'Elbrus', 'Olimp'], a: 0, e: 'Mont Blanc (aprox. 4800 m), la granița dintre Franța și Italia.' },
+          { q: 'Peninsula Scandinavică este ocupată în principal de:', o: ['Norvegia și Suedia', 'Danemarca și Finlanda', 'Islanda și Norvegia', 'Estonia și Letonia'], a: 0, e: 'Norvegia și Suedia ocupă cea mai mare parte a peninsulei.' },
+          { q: 'Cel mai mare stat situat în întregime în Europa, ca suprafață, este:', o: ['Franța', 'Ucraina', 'Germania', 'Spania'], a: 1, e: 'Ucraina (aprox. 603.000 km²). Rusia se întinde și în Asia.' },
+          { q: 'Golful Botnic aparține:', o: ['Mării Mediterane', 'Mării Baltice', 'Mării Nordului', 'Mării Negre'], a: 1, e: 'Golful Botnic se află între Suedia și Finlanda, în nordul Mării Baltice.' },
+          { q: 'Hidrocentrala și lacul de acumulare Porțile de Fier I se află pe:', o: ['Olt', 'Dunăre', 'Siret', 'Argeș'], a: 1, e: 'Sunt situate pe Dunăre, la granița cu Serbia.' },
+          { q: 'Moneda oficială a României este:', o: ['euro', 'leul', 'forintul', 'leva'], a: 1, e: 'România este membră UE, dar nu a adoptat încă moneda euro.' },
+          { q: 'Orașul în care se află sediul oficial al Parlamentului European este:', o: ['Bruxelles', 'Strasbourg', 'Luxemburg', 'Haga'], a: 1, e: 'Sesiunile plenare au loc la Strasbourg; comisiile lucrează și la Bruxelles.' },
+          { q: 'Cel mai mare afluent al Dunării de pe teritoriul României (ca debit) este:', o: ['Siretul', 'Argeșul', 'Jiul', 'Ialomița'], a: 0, e: 'Siretul are cel mai mare debit dintre râurile interioare ale României.' },
+          { q: 'Munții Carpați se întind pe teritoriul României pe o lungime de aproximativ:', o: ['300 km', '910 km', '2000 km', '1500 km'], a: 1, e: 'Din cei aprox. 1500 km ai lanțului carpatic, circa 910 km sunt în România.' }
+        ]
+      },
+      {
+        id: 'bac-biologie', name: 'Biologie', icon: '🧬', color: '#6a994e',
+        questions: [
+          { q: 'Organitul celular în care are loc sinteza proteinelor este:', o: ['mitocondria', 'ribozomul', 'lizozomul', 'vacuola'], a: 1, e: 'Ribozomii traduc ARN-ul mesager în lanțuri polipeptidice.' },
+          { q: 'Mitocondria are rol în:', o: ['fotosinteză', 'respirația celulară și producerea de ATP', 'digestia intracelulară', 'diviziunea celulară'], a: 1, e: 'Mitocondriile sunt „centralele energetice” ale celulei.' },
+          { q: 'Gameții se formează prin:', o: ['mitoză', 'meioză', 'amitoză', 'fotosinteză'], a: 1, e: 'Meioza reduce la jumătate numărul de cromozomi (celule haploide).' },
+          { q: 'O celulă somatică umană conține:', o: ['23 de cromozomi', '46 de cromozomi', '48 de cromozomi', '92 de cromozomi'], a: 1, e: '23 de perechi = 46 de cromozomi (diploid, 2n).' },
+          { q: 'Insulina este secretată de:', o: ['ficat', 'pancreasul endocrin', 'tiroidă', 'suprarenale'], a: 1, e: 'Celulele beta din insulele Langerhans ale pancreasului secretă insulină.' },
+          { q: 'Hemoglobina din hematii are rol principal în:', o: ['coagulare', 'apărarea imunitară', 'transportul oxigenului', 'producerea de anticorpi'], a: 2, e: 'Hemoglobina leagă oxigenul și îl transportă la țesuturi.' },
+          { q: 'Unitatea structurală și funcțională a rinichiului este:', o: ['neuronul', 'nefronul', 'alveola', 'hepatocitul'], a: 1, e: 'Nefronul filtrează sângele și formează urina.' },
+          { q: 'Fotosinteza are loc în:', o: ['cloroplaste', 'mitocondrii', 'ribozomi', 'nucleu'], a: 0, e: 'Cloroplastele conțin clorofilă, care captează energia luminoasă.' },
+          { q: 'Persoana cu grupa de sânge 0 (I) este considerată:', o: ['primitor universal', 'donator universal', 'incompatibilă cu toate grupele', 'Rh negativ obligatoriu'], a: 1, e: 'Hematiile grupei 0 nu au aglutinogene A sau B (în sistemul ABO).' },
+          { q: 'Legile eredității au fost formulate de:', o: ['Charles Darwin', 'Gregor Mendel', 'Louis Pasteur', 'Thomas Morgan'], a: 1, e: 'Gregor Mendel, prin experimente pe mazăre (1865).' },
+          { q: 'Sindromul Down este cauzat de:', o: ['trisomia 21', 'monosomia X', 'trisomia 18', 'o mutație genică pe cromozomul Y'], a: 0, e: 'Prezența a trei cromozomi 21 (anomalie numerică).' },
+          { q: 'Hemofilia este o boală ereditară:', o: ['legată de cromozomul X', 'legată de cromozomul Y', 'autozomală dominantă', 'infecțioasă'], a: 0, e: 'Gena recesivă se află pe cromozomul X, de aceea afectează mai des bărbații.' },
+          { q: 'Schimbul de gaze respiratorii are loc la nivelul:', o: ['bronhiilor', 'traheei', 'alveolelor pulmonare', 'laringelui'], a: 2, e: 'Alveolele au pereți foarte subțiri și sunt înconjurate de capilare.' },
+          { q: 'Hormonul de creștere (STH) este secretat de:', o: ['tiroidă', 'adenohipofiză', 'pancreas', 'timus'], a: 1, e: 'Lobul anterior al hipofizei (adenohipofiza) secretă STH.' },
+          { q: 'În molecula de ADN, adenina este complementară cu:', o: ['guanina', 'citozina', 'timina', 'uracilul'], a: 2, e: 'A–T (două legături de hidrogen) și G–C (trei legături).' },
+          { q: 'Celulele procariote se caracterizează prin:', o: ['nucleu delimitat de membrană', 'absența nucleului delimitat', 'prezența cloroplastelor întotdeauna', 'prezența mitocondriilor'], a: 1, e: 'Bacteriile au material genetic liber în citoplasmă (nucleoid).' },
+          { q: 'Bila este produsă de:', o: ['vezica biliară', 'ficat', 'pancreas', 'stomac'], a: 1, e: 'Bila este produsă de ficat și stocată în vezica biliară.' },
+          { q: 'Lipsa vitaminei D la copii provoacă:', o: ['scorbut', 'rahitism', 'pelagră', 'beri-beri'], a: 1, e: 'Vitamina D favorizează absorbția calciului; deficitul duce la rahitism.' },
+          { q: 'Prelungirile neuronului care conduc impulsul spre corpul celular sunt:', o: ['axonii', 'dendritele', 'butonii terminali', 'tecile de mielină'], a: 1, e: 'Dendritele primesc impulsul și îl conduc spre corpul neuronului (celulipet).' },
+          { q: 'Peretele celular al celulei vegetale este format în principal din:', o: ['chitină', 'celuloză', 'colesterol', 'keratină'], a: 1, e: 'Celuloza conferă rigiditate celulei vegetale.' }
+        ]
+      },
+      {
+        id: 'bac-chimie', name: 'Chimie', icon: '⚗️', color: '#9c6ade',
+        questions: [
+          { q: 'Numărul atomic Z reprezintă numărul de:', o: ['neutroni', 'protoni din nucleu', 'nucleoni', 'straturi electronice'], a: 1, e: 'Z = numărul de protoni (egal cu numărul de electroni în atomul neutru).' },
+          { q: 'Soluția cu pH = 7 este:', o: ['acidă', 'bazică', 'neutră', 'oxidantă'], a: 2, e: 'pH < 7 acid, pH = 7 neutru, pH > 7 bazic (la 25 °C).' },
+          { q: 'Masa molară a NaCl (A_Na = 23, A_Cl = 35,5) este:', o: ['58,5 g/mol', '35,5 g/mol', '23 g/mol', '117 g/mol'], a: 0, e: '23 + 35,5 = 58,5 g/mol.' },
+          { q: 'Elementul care face parte din gazele rare (nobile) este:', o: ['azotul', 'oxigenul', 'argonul', 'clorul'], a: 2, e: 'Gazele nobile (grupa 18): He, Ne, Ar, Kr, Xe, Rn.' },
+          { q: 'Formula moleculară a metanului este:', o: ['CH₄', 'C₂H₆', 'C₂H₄', 'CH₃OH'], a: 0, e: 'Metanul este cel mai simplu alcan: CH₄.' },
+          { q: 'Formula generală a alchenelor este:', o: ['CₙH₂ₙ₊₂', 'CₙH₂ₙ', 'CₙH₂ₙ₋₂', 'CₙH₂ₙ₋₆'], a: 1, e: 'Alchenele au o dublă legătură C=C: CₙH₂ₙ.' },
+          { q: 'Acetilena (etina) are formula:', o: ['C₂H₂', 'C₂H₄', 'C₂H₆', 'C₆H₆'], a: 0, e: 'Este prima alchină, cu o triplă legătură: HC≡CH.' },
+          { q: 'Reacția dintre un acid și o bază, cu formare de sare și apă, se numește:', o: ['hidroliză', 'neutralizare', 'oxidare', 'esterificare'], a: 1, e: 'Ex.: HCl + NaOH → NaCl + H₂O.' },
+          { q: 'Formula etanolului este:', o: ['CH₃OH', 'CH₃–CH₂–OH', 'CH₃COOH', 'CH₃–O–CH₃'], a: 1, e: 'Etanolul (alcoolul etilic): C₂H₅OH.' },
+          { q: 'Grupa funcțională a acizilor carboxilici este:', o: ['–OH', '–COOH', '–CHO', '–NH₂'], a: 1, e: 'Grupa carboxil: –COOH (ex.: acidul acetic CH₃COOH).' },
+          { q: 'Numărul lui Avogadro are valoarea aproximativă:', o: ['6,022 · 10²³ mol⁻¹', '3 · 10⁸ mol⁻¹', '22,4 mol⁻¹', '1,6 · 10⁻¹⁹ mol⁻¹'], a: 0, e: 'N_A ≈ 6,022 · 10²³ particule într-un mol.' },
+          { q: 'În clorura de sodiu (NaCl) legătura chimică este:', o: ['covalentă nepolară', 'ionică', 'metalică', 'de hidrogen'], a: 1, e: 'Na cedează un electron, Cl îl acceptă: se formează ionii Na⁺ și Cl⁻.' },
+          { q: 'Un mol de gaz, în condiții normale, ocupă:', o: ['1 L', '22,4 L', '24,5 L', '6,022 L'], a: 1, e: 'Volumul molar în c.n. (0 °C, 1 atm) este 22,4 L/mol.' },
+          { q: '20 g de sare dizolvate în 80 g de apă formează o soluție de concentrație:', o: ['20%', '25%', '80%', '16%'], a: 0, e: 'm soluție = 100 g; c = 20/100 · 100 = 20%.' },
+          { q: 'Formula moleculară a benzenului este:', o: ['C₆H₁₂', 'C₆H₆', 'C₆H₁₄', 'C₇H₈'], a: 1, e: 'Benzenul este cea mai simplă arenă: C₆H₆.' },
+          { q: 'Formula moleculară a glucozei este:', o: ['C₁₂H₂₂O₁₁', 'C₆H₁₂O₆', 'C₆H₁₀O₅', 'C₂H₅OH'], a: 1, e: 'Glucoza este o monozaharidă: C₆H₁₂O₆.' },
+          { q: 'Oxidarea reprezintă procesul de:', o: ['acceptare de electroni', 'cedare de electroni', 'acceptare de protoni', 'cedare de neutroni'], a: 1, e: 'Oxidare = cedare de electroni; reducere = acceptare de electroni.' },
+          { q: 'Izomerii sunt compuși care au:', o: ['aceeași structură și formule diferite', 'aceeași formulă moleculară și structuri diferite', 'aceeași masă și elemente diferite', 'proprietăți identice'], a: 1, e: 'Exemplu: n-butanul și izobutanul (C₄H₁₀).' },
+          { q: 'Metalele alcaline se găsesc în tabelul periodic în:', o: ['grupa 1', 'grupa 2', 'grupa 17', 'grupa 18'], a: 0, e: 'Li, Na, K, Rb, Cs, Fr – grupa 1 (IA).' },
+          { q: 'Reacția de ardere completă a unei hidrocarburi produce:', o: ['CO și H₂', 'CO₂ și H₂O', 'C și H₂O', 'CH₄ și O₂'], a: 1, e: 'Ex.: CH₄ + 2O₂ → CO₂ + 2H₂O.' }
+        ]
+      },
+      {
+        id: 'bac-fizica', name: 'Fizică', icon: '⚛️', color: '#e9a23b',
+        questions: [
+          { q: 'Unitatea de măsură a forței în S.I. este:', o: ['joule', 'newton', 'watt', 'pascal'], a: 1, e: '1 N = 1 kg·m/s².' },
+          { q: 'Principiul fundamental al dinamicii se exprimă prin relația:', o: ['F = m·a', 'F = m/a', 'p = m·v', 'E = mgh'], a: 0, e: 'Principiul al II-lea al lui Newton: F = m·a.' },
+          { q: 'Energia cinetică a unui corp se calculează cu relația:', o: ['mgh', 'mv²/2', 'mv', 'Fd'], a: 1, e: 'Ec = m·v²/2.' },
+          { q: 'Un corp cu masa 2 kg se mișcă cu 3 m/s. Energia sa cinetică este:', o: ['3 J', '6 J', '9 J', '18 J'], a: 2, e: 'Ec = 2·9/2 = 9 J.' },
+          { q: 'Viteza luminii în vid are valoarea aproximativă:', o: ['3·10⁵ m/s', '3·10⁸ m/s', '340 m/s', '3·10¹⁰ m/s'], a: 1, e: 'c ≈ 3·10⁸ m/s (300.000 km/s).' },
+          { q: 'Legea lui Ohm pentru o porțiune de circuit este:', o: ['U = R·I', 'U = R/I', 'P = R·I', 'I = U·R'], a: 0, e: 'Tensiunea = rezistența · intensitatea curentului.' },
+          { q: 'Rezistența echivalentă a doi rezistori de 4 Ω și 6 Ω legați în serie este:', o: ['2,4 Ω', '10 Ω', '24 Ω', '5 Ω'], a: 1, e: 'În serie: R = R₁ + R₂ = 10 Ω.' },
+          { q: 'Puterea electrică se calculează cu:', o: ['P = U·I', 'P = U/I', 'P = R/I', 'P = I/U'], a: 0, e: 'P = U·I, măsurată în wați (W).' },
+          { q: 'Energia potențială gravitațională a unui corp de 2 kg aflat la 10 m înălțime (g = 10 m/s²) este:', o: ['20 J', '100 J', '200 J', '2000 J'], a: 2, e: 'Ep = mgh = 2·10·10 = 200 J.' },
+          { q: 'Asupra unui corp cu masa 5 kg acționează o forță rezultantă de 20 N. Accelerația este:', o: ['4 m/s²', '100 m/s²', '0,25 m/s²', '15 m/s²'], a: 0, e: 'a = F/m = 20/5 = 4 m/s².' },
+          { q: 'Transformarea în care temperatura gazului rămâne constantă se numește:', o: ['izobară', 'izocoră', 'izotermă', 'adiabatică'], a: 2, e: 'Izotermă: T = const., deci p·V = const.' },
+          { q: 'Principiul I al termodinamicii se scrie:', o: ['ΔU = Q − L', 'ΔU = Q + T', 'Q = m·c', 'L = p·T'], a: 0, e: 'Variația energiei interne = căldura primită − lucrul mecanic efectuat.' },
+          { q: '0 K corespunde temperaturii de aproximativ:', o: ['0 °C', '−100 °C', '−273,15 °C', '273,15 °C'], a: 2, e: 'T(K) = t(°C) + 273,15.' },
+          { q: 'Unitatea de măsură a frecvenței este:', o: ['secunda', 'hertzul', 'metrul', 'radianul'], a: 1, e: '1 Hz = 1 s⁻¹.' },
+          { q: 'Convergența unei lentile se măsoară în:', o: ['metri', 'dioptrii', 'candele', 'lucși'], a: 1, e: 'C = 1/f; 1 dioptrie = 1 m⁻¹.' },
+          { q: 'Indicele de refracție absolut al unui mediu este:', o: ['n = c/v', 'n = v/c', 'n = c·v', 'n = f/λ'], a: 0, e: 'Raportul dintre viteza luminii în vid și viteza în mediu.' },
+          { q: 'Lucrul mecanic al unei forțe constante paralele cu deplasarea este:', o: ['L = F·d', 'L = F/d', 'L = m·a', 'L = P·d'], a: 0, e: 'L = F·d (dacă forța și deplasarea au aceeași direcție și sens).' },
+          { q: 'Unitatea de măsură a puterii mecanice este:', o: ['joule', 'watt', 'newton', 'kelvin'], a: 1, e: '1 W = 1 J/s.' },
+          { q: 'Impulsul unui corp se definește ca:', o: ['p = m·v', 'p = m·a', 'p = F·t²', 'p = mv²/2'], a: 0, e: 'Impulsul (cantitatea de mișcare) p = m·v.' },
+          { q: 'Rezistența echivalentă a doi rezistori de 6 Ω legați în paralel este:', o: ['12 Ω', '6 Ω', '3 Ω', '36 Ω'], a: 2, e: '1/R = 1/6 + 1/6 = 1/3, deci R = 3 Ω.' }
+        ]
+      },
+      {
+        id: 'bac-info', name: 'Informatică', icon: '💻', color: '#264653',
+        questions: [
+          { q: 'Valoarea expresiei C++ 17 % 5 este:', o: ['3', '2', '3.4', '1'], a: 1, e: 'Operatorul % dă restul împărțirii: 17 = 5·3 + 2.' },
+          { q: 'Dacă a și b sunt de tip int, valoarea expresiei 17 / 5 este:', o: ['3.4', '3', '4', '2'], a: 1, e: 'Împărțirea între întregi păstrează doar câtul: 3.' },
+          { q: 'Valoarea expresiei !(3 > 2) în C++ este:', o: ['1 (true)', '0 (false)', '3', 'eroare'], a: 1, e: '3 > 2 este adevărat; negația sa este fals (0).' },
+          { q: 'Pentru declarația int a[10]; indicii valizi sunt:', o: ['1…10', '0…9', '0…10', '1…9'], a: 1, e: 'În C++, indexarea tablourilor începe de la 0.' },
+          { q: 'Numărul 1011 scris în baza 2 are, în baza 10, valoarea:', o: ['9', '10', '11', '13'], a: 2, e: '1·8 + 0·4 + 1·2 + 1·1 = 11.' },
+          { q: 'Complexitatea căutării binare într-un tablou sortat cu n elemente este:', o: ['O(n)', 'O(log n)', 'O(n²)', 'O(1)'], a: 1, e: 'La fiecare pas intervalul de căutare se înjumătățește.' },
+          { q: 'Un graf neorientat complet cu 5 noduri are:', o: ['5 muchii', '10 muchii', '20 muchii', '25 muchii'], a: 1, e: 'n(n−1)/2 = 5·4/2 = 10 muchii.' },
+          { q: 'Un arbore cu n noduri are:', o: ['n muchii', 'n − 1 muchii', 'n + 1 muchii', '2n muchii'], a: 1, e: 'Arborele este un graf conex și aciclic: are exact n − 1 muchii.' },
+          { q: 'Structura de date de tip stivă funcționează după principiul:', o: ['FIFO', 'LIFO', 'aleator', 'sortat'], a: 1, e: 'LIFO – ultimul intrat, primul ieșit.' },
+          { q: 'Structura de date de tip coadă funcționează după principiul:', o: ['FIFO', 'LIFO', 'aleator', 'recursiv'], a: 0, e: 'FIFO – primul intrat, primul ieșit.' },
+          { q: 'strlen("bacalaureat") returnează:', o: ['10', '11', '12', '9'], a: 1, e: 'Cuvântul are 11 caractere (terminatorul nul nu este numărat).' },
+          { q: 'După secvența s = 0; for(i = 1; i <= 5; i++) s = s + i; variabila s are valoarea:', o: ['10', '15', '5', '21'], a: 1, e: '1 + 2 + 3 + 4 + 5 = 15.' },
+          { q: 'Metoda de programare folosită de obicei pentru generarea permutărilor este:', o: ['Greedy', 'Backtracking', 'Divide et Impera', 'căutarea binară'], a: 1, e: 'Backtracking construiește soluțiile pas cu pas și revine când o alegere nu e validă.' },
+          { q: 'Într-un graf neorientat cu m muchii, suma gradelor tuturor nodurilor este:', o: ['m', '2m', 'm²', 'm − 1'], a: 1, e: 'Fiecare muchie contribuie cu 1 la gradul fiecăreia dintre cele două extremități.' },
+          { q: 'Complexitatea algoritmului de sortare prin metoda bulelor (bubble sort) este, în cazul cel mai defavorabil:', o: ['O(n)', 'O(n log n)', 'O(n²)', 'O(log n)'], a: 2, e: 'Se fac până la n − 1 parcurgeri ale tabloului.' },
+          { q: 'Pentru funcția f(n) = (n == 0 ? 1 : n * f(n − 1)), valoarea f(4) este:', o: ['4', '10', '24', '16'], a: 2, e: 'Este factorialul: 4! = 24.' },
+          { q: 'După x = 5; x += 3; x *= 2; variabila x are valoarea:', o: ['11', '13', '16', '10'], a: 2, e: 'x devine 8, apoi 16.' },
+          { q: 'Într-un arbore cu rădăcină, un nod fără descendenți se numește:', o: ['rădăcină', 'frunză', 'tată', 'ciclu'], a: 1, e: 'Nodurile terminale se numesc frunze.' },
+          { q: 'Cel mai mare număr natural care poate fi reprezentat pe 8 biți (fără semn) este:', o: ['127', '255', '256', '512'], a: 1, e: '2⁸ − 1 = 255.' },
+          { q: 'Tipul de date potrivit pentru memorarea numărului 3.75 în C++ este:', o: ['int', 'char', 'double', 'bool'], a: 2, e: 'Numerele reale se memorează în float sau double.' }
+        ]
+      },
+      {
+        id: 'bac-logica', name: 'Logică și argumentare', icon: '🧩', color: '#5c7aea',
+        questions: [
+          { q: 'Între sfera și conținutul unui termen există un raport:', o: ['direct proporțional', 'invers', 'de identitate', 'nu există niciun raport'], a: 1, e: 'Cu cât conținutul crește, cu atât sfera scade (și invers).' },
+          { q: 'Propoziția „Toți S sunt P” este de tip:', o: ['A – universal afirmativă', 'E – universal negativă', 'I – particular afirmativă', 'O – particular negativă'], a: 0, e: 'A și I vin de la „AffIrmo”, E și O de la „nEgO”.' },
+          { q: 'Propoziția „Niciun S nu este P” este de tip:', o: ['A', 'E', 'I', 'O'], a: 1, e: 'Universal negativă (E).' },
+          { q: 'Un silogism are:', o: ['doi termeni', 'trei termeni', 'patru termeni', 'oricâți termeni'], a: 1, e: 'Termenul major (P), minor (S) și mediu (M).' },
+          { q: 'Termenul mediu dintr-un silogism apare:', o: ['doar în concluzie', 'în ambele premise, dar nu în concluzie', 'doar în premisa majoră', 'în concluzie și într-o premisă'], a: 1, e: 'Termenul mediu face legătura între premise și dispare din concluzie.' },
+          { q: 'Contradictoria propoziției de tip A este propoziția de tip:', o: ['E', 'I', 'O', 'A'], a: 2, e: 'A–O și E–I sunt perechi de contradictorii (nu pot fi nici ambele adevărate, nici ambele false).' },
+          { q: 'Două propoziții contrare (A și E):', o: ['pot fi ambele adevărate', 'nu pot fi ambele adevărate', 'nu pot fi ambele false', 'sunt mereu echivalente'], a: 1, e: 'Contrarele pot fi însă ambele false.' },
+          { q: 'Două propoziții subcontrare (I și O):', o: ['nu pot fi ambele false', 'nu pot fi ambele adevărate', 'sunt contradictorii', 'sunt mereu false'], a: 0, e: 'Subcontrarele pot fi ambele adevărate, dar nu pot fi ambele false.' },
+          { q: 'Implicația p → q este falsă doar atunci când:', o: ['p și q sunt false', 'p este fals și q adevărat', 'p este adevărat și q fals', 'p și q sunt adevărate'], a: 2, e: 'Din adevăr nu poate rezulta fals.' },
+          { q: 'Disjuncția inclusivă p ∨ q este falsă când:', o: ['ambele sunt adevărate', 'ambele sunt false', 'doar p e adevărat', 'doar q e adevărat'], a: 1, e: 'Disjuncția inclusivă e adevărată dacă cel puțin un termen e adevărat.' },
+          { q: 'Conversiunea propoziției „Niciun S nu este P” are ca rezultat:', o: ['„Niciun P nu este S”', '„Toți P sunt S”', '„Unii P nu sunt S”', 'nu se poate converti'], a: 0, e: 'Propoziția E se convertește simplu (fără schimbarea cantității).' },
+          { q: 'Argumentul „ad hominem” constă în:', o: ['apelul la autoritate', 'atacul la persoană în locul tezei', 'apelul la milă', 'generalizarea pripită'], a: 1, e: 'Se respinge teza criticând persoana care o susține, nu argumentele ei.' },
+          { q: 'O definiție prin gen proxim și diferență specifică indică:', o: ['clasa imediat superioară și trăsătura distinctivă', 'doar exemple', 'originea cuvântului', 'sinonime'], a: 0, e: 'Ex.: „Pătratul este un dreptunghi (gen proxim) cu laturile egale (diferență specifică).”' },
+          { q: 'Între termenii „pătrat” și „patrulater” există un raport de:', o: ['identitate', 'subordonare', 'încrucișare', 'opoziție contradictorie'], a: 1, e: 'Sfera termenului „pătrat” este inclusă în sfera termenului „patrulater”.' },
+          { q: 'Un raționament deductiv valid garantează că:', o: ['concluzia e adevărată orice ar fi premisele', 'dacă premisele sunt adevărate, concluzia este adevărată', 'premisele sunt adevărate', 'concluzia e probabilă'], a: 1, e: 'Validitatea ține de formă: premise adevărate → concluzie adevărată.' },
+          { q: 'Inducția completă presupune:', o: ['examinarea tuturor cazurilor dintr-o clasă', 'examinarea unui singur caz', 'o analogie', 'o ipoteză neverificată'], a: 0, e: 'Concluzia se referă la o clasă ale cărei elemente au fost cercetate toate.' }
+        ]
+      },
+      {
+        id: 'bac-psihologie', name: 'Psihologie', icon: '🧠', color: '#d16ba5',
+        questions: [
+          { q: 'Procesul psihic care reflectă însușirile izolate ale obiectelor este:', o: ['percepția', 'senzația', 'reprezentarea', 'gândirea'], a: 1, e: 'Senzația oferă informații despre o singură însușire (culoare, sunet etc.).' },
+          { q: 'Procesul care oferă o imagine unitară a obiectului, în prezența lui, este:', o: ['senzația', 'percepția', 'memoria', 'imaginația'], a: 1, e: 'Percepția integrează însușirile într-o imagine de ansamblu.' },
+          { q: 'Procesele memoriei sunt:', o: ['analiza, sinteza, comparația', 'memorarea, păstrarea și reactualizarea', 'volumul, stabilitatea, mobilitatea', 'aglutinarea, amplificarea, diviziunea'], a: 1, e: 'Memorarea (întipărirea), păstrarea (stocarea) și reactualizarea (recunoaștere/reproducere).' },
+          { q: 'Temperamentul caracterizat prin energie, impulsivitate și dezechilibru este:', o: ['sangvinic', 'flegmatic', 'coleric', 'melancolic'], a: 2, e: 'Colericul este tipul puternic, neechilibrat, excitabil.' },
+          { q: 'Temperamentul calm, lent, echilibrat și inert este:', o: ['flegmatic', 'coleric', 'sangvinic', 'melancolic'], a: 0, e: 'Flegmaticul: puternic, echilibrat, inert.' },
+          { q: 'Analiza, sinteza, comparația, abstractizarea și generalizarea sunt operații ale:', o: ['memoriei', 'gândirii', 'atenției', 'voinței'], a: 1, e: 'Sunt operațiile generale ale gândirii.' },
+          { q: 'Piramida trebuințelor a fost elaborată de:', o: ['Sigmund Freud', 'Abraham Maslow', 'Jean Piaget', 'Ivan Pavlov'], a: 1, e: 'Abraham Maslow: de la trebuințele fiziologice la autorealizare.' },
+          { q: 'Motivația intrinsecă provine din:', o: ['recompense externe', 'interesul pentru activitatea în sine', 'pedepse', 'presiunea grupului'], a: 1, e: 'Activitatea este realizată pentru plăcerea/interesul pe care îl oferă.' },
+          { q: 'Latura relațional-valorică a personalității este:', o: ['temperamentul', 'caracterul', 'aptitudinile', 'inteligența'], a: 1, e: 'Caracterul exprimă atitudinile și valorile persoanei.' },
+          { q: 'Latura instrumental-operațională a personalității este reprezentată de:', o: ['aptitudini', 'temperament', 'caracter', 'motivație'], a: 0, e: 'Aptitudinile permit realizarea cu succes a unor activități.' },
+          { q: 'Curba uitării a fost descrisă de:', o: ['Hermann Ebbinghaus', 'Wilhelm Wundt', 'Carl Jung', 'B. F. Skinner'], a: 0, e: 'Ebbinghaus a arătat că uitarea este rapidă imediat după învățare.' },
+          { q: 'Legea Yerkes–Dodson se referă la:', o: ['optimul motivațional', 'pragurile senzoriale', 'tipurile de memorie', 'stadiile dezvoltării'], a: 0, e: 'Performanța este maximă la un nivel optim (moderat) de motivație.' },
+          { q: 'Primul test de inteligență a fost elaborat de:', o: ['Binet și Simon', 'Freud și Breuer', 'Pavlov și Behterev', 'Piaget și Inhelder'], a: 0, e: 'Alfred Binet și Théodore Simon (1905).' },
+          { q: 'Capacitatea atenției de a se orienta simultan spre mai multe activități se numește:', o: ['stabilitate', 'distributivitate', 'concentrare', 'volum'], a: 1, e: 'Distributivitatea permite urmărirea mai multor activități în același timp.' },
+          { q: 'Procedeul imaginației care combină elemente din obiecte diferite (ex.: sirena) este:', o: ['aglutinarea', 'diviziunea', 'schematizarea', 'tipizarea'], a: 0, e: 'Aglutinarea = combinarea unor părți ale unor obiecte diferite într-o imagine nouă.' }
+        ]
+      },
+      {
+        id: 'bac-economie', name: 'Economie', icon: '💰', color: '#43aa8b',
+        questions: [
+          { q: 'Problema fundamentală a economiei este generată de:', o: ['abundența resurselor', 'raritatea resurselor în raport cu nevoile', 'existența banilor', 'concurență'], a: 1, e: 'Nevoile sunt nelimitate, iar resursele sunt limitate (rare).' },
+          { q: 'Costul de oportunitate reprezintă:', o: ['prețul de vânzare', 'valoarea celei mai bune alternative sacrificate', 'costul total', 'profitul'], a: 1, e: 'Este ceea ce se renunță atunci când se face o alegere.' },
+          { q: 'Conform legii cererii, dacă prețul unui bun crește (ceteris paribus), cantitatea cerută:', o: ['crește', 'scade', 'rămâne constantă', 'se dublează'], a: 1, e: 'Prețul și cantitatea cerută variază în sens invers.' },
+          { q: 'Inflația reprezintă:', o: ['scăderea generalizată a prețurilor', 'creșterea generalizată și persistentă a prețurilor', 'creșterea salariilor', 'creșterea producției'], a: 1, e: 'Inflația duce la scăderea puterii de cumpărare a banilor.' },
+          { q: 'Profitul se calculează ca diferența dintre:', o: ['venitul total și costul total', 'preț și cantitate', 'costul fix și costul variabil', 'cerere și ofertă'], a: 0, e: 'Profit = VT − CT.' },
+          { q: 'Piața cu un singur vânzător se numește:', o: ['monopson', 'monopol', 'oligopol', 'concurență perfectă'], a: 1, e: 'Monopsonul = un singur cumpărător; oligopolul = câțiva vânzători.' },
+          { q: 'Banca centrală a României este:', o: ['Banca Transilvania', 'Banca Națională a României', 'CEC Bank', 'Trezoreria Statului'], a: 1, e: 'BNR emite moneda națională și asigură stabilitatea prețurilor.' },
+          { q: 'Chiria plătită pentru spațiul de producție este un exemplu de:', o: ['cost variabil', 'cost fix', 'cost marginal', 'venit'], a: 1, e: 'Costul fix nu depinde de volumul producției pe termen scurt.' },
+          { q: 'Factorii de producție clasici sunt:', o: ['munca, natura și capitalul', 'banii, prețul și profitul', 'cererea și oferta', 'importul și exportul'], a: 0, e: 'Acestora li se adaugă factorii neofactori (antreprenoriat, informație etc.).' },
+          { q: 'Productivitatea medie a muncii se calculează ca:', o: ['Q · L', 'Q / L', 'L / Q', 'Q − L'], a: 1, e: 'W_L = producția (Q) / numărul de lucrători (L).' },
+          { q: 'Mașina și benzina sunt exemple de bunuri:', o: ['substituibile', 'complementare', 'inferioare', 'libere'], a: 1, e: 'Bunurile complementare se consumă împreună.' },
+          { q: 'Ceaiul și cafeaua sunt exemple de bunuri:', o: ['complementare', 'substituibile', 'de capital', 'publice'], a: 1, e: 'Se pot înlocui reciproc în consum.' },
+          { q: 'PIB-ul măsoară:', o: ['valoarea bunurilor și serviciilor finale produse într-o țară într-un an', 'datoria publică', 'numărul de șomeri', 'exporturile'], a: 0, e: 'Produsul Intern Brut – indicator al activității economice.' },
+          { q: 'Șomerul este persoana care:', o: ['nu dorește să muncească', 'este aptă de muncă, caută activ un loc de muncă și nu are unul', 'este pensionară', 'este elev'], a: 1, e: 'Definiția BIM pentru șomer.' },
+          { q: 'Cererea este elastică atunci când coeficientul de elasticitate în funcție de preț este:', o: ['mai mic decât 1', 'egal cu 0', 'mai mare decât 1', 'negativ infinit'], a: 2, e: 'Kₑ > 1: cantitatea cerută variază mai mult decât prețul (în procente).' }
+        ]
+      },
+      {
+        id: 'bac-sociologie', name: 'Sociologie', icon: '👥', color: '#f4845f',
+        questions: [
+          { q: 'Termenul de „sociologie” a fost introdus de:', o: ['Auguste Comte', 'Karl Marx', 'Max Weber', 'Émile Durkheim'], a: 0, e: 'Auguste Comte, în secolul al XIX-lea.' },
+          { q: 'Principalul agent al socializării primare este:', o: ['școala', 'familia', 'mass-media', 'locul de muncă'], a: 1, e: 'Socializarea primară are loc în copilărie, în familie.' },
+          { q: 'Statusul obținut prin efort propriu (ex.: medic) se numește:', o: ['status atribuit', 'status dobândit', 'rol social', 'normă'], a: 1, e: 'Statusul atribuit (sex, vârstă, origine) nu depinde de alegerea persoanei.' },
+          { q: 'Ansamblul comportamentelor așteptate de la o persoană cu un anumit status este:', o: ['norma', 'rolul social', 'valoarea', 'instituția'], a: 1, e: 'Rolul este latura dinamică a statusului.' },
+          { q: 'Un exemplu de grup primar este:', o: ['partidul politic', 'familia', 'sindicatul', 'o corporație'], a: 1, e: 'Grupurile primare sunt mici, cu relații directe, afective (familie, prieteni).' },
+          { q: 'Școala sociologică de la București, cu cercetările monografice ale satelor, a fost întemeiată de:', o: ['Dimitrie Gusti', 'Henri H. Stahl', 'Constantin Rădulescu-Motru', 'Titu Maiorescu'], a: 0, e: 'Dimitrie Gusti a coordonat campanii monografice în anii interbelici.' },
+          { q: 'Trecerea unei persoane de la un nivel social inferior la unul superior este:', o: ['mobilitate orizontală', 'mobilitate verticală ascendentă', 'socializare', 'deviere'], a: 1, e: 'Mobilitatea verticală implică schimbarea poziției în ierarhia socială.' },
+          { q: 'Comportamentul care încalcă normele sociale acceptate se numește:', o: ['conformism', 'devianță', 'socializare', 'integrare'], a: 1, e: 'Devianța = abaterea de la normele grupului sau societății.' },
+          { q: 'Ancheta pe bază de chestionar este o metodă:', o: ['cantitativă', 'exclusiv calitativă', 'experimentală de laborator', 'literară'], a: 0, e: 'Permite culegerea și prelucrarea statistică a datelor de la multe persoane.' },
+          { q: 'Ansamblul mijloacelor prin care societatea asigură respectarea normelor este:', o: ['controlul social', 'mobilitatea socială', 'stratificarea', 'cultura'], a: 0, e: 'Controlul social poate fi formal (legi) sau informal (dezaprobare).' },
+          { q: 'Instituția socială care are ca funcție principală transmiterea cunoștințelor este:', o: ['familia', 'școala', 'biserica', 'armata'], a: 1, e: 'Școala (instituția educațională) realizează socializarea secundară formală.' },
+          { q: 'Prejudecata reprezintă:', o: ['o opinie bazată pe date verificate', 'o atitudine preconcepută, de obicei negativă, față de un grup', 'o normă juridică', 'un rol social'], a: 1, e: 'Prejudecățile se formează fără o cunoaștere reală a celorlalți.' }
+        ]
+      },
+      {
+        id: 'bac-filosofie', name: 'Filosofie', icon: '🦉', color: '#7f5539',
+        questions: [
+          { q: 'Afirmația „Știu că nu știu nimic” îi este atribuită lui:', o: ['Platon', 'Socrate', 'Aristotel', 'Heraclit'], a: 1, e: 'Socrate își exprima astfel conștiința limitelor propriei cunoașteri.' },
+          { q: '„Cuget, deci exist” este formularea lui:', o: ['René Descartes', 'Immanuel Kant', 'John Locke', 'David Hume'], a: 0, e: 'Descartes – „Cogito, ergo sum”.' },
+          { q: '„Alegoria peșterii” apare în opera lui:', o: ['Aristotel', 'Platon', 'Seneca', 'Epicur'], a: 1, e: 'În dialogul „Republica”, ilustrând teoria Ideilor.' },
+          { q: 'Imperativul categoric este un concept al filosofiei morale a lui:', o: ['John Stuart Mill', 'Immanuel Kant', 'Thomas Hobbes', 'Friedrich Nietzsche'], a: 1, e: '„Acționează numai conform acelei maxime prin care poți vrea totodată ca ea să devină o lege universală.”' },
+          { q: 'Utilitarismul (cea mai mare fericire pentru cel mai mare număr de oameni) este asociat cu:', o: ['Bentham și Mill', 'Kant și Hegel', 'Platon și Aristotel', 'Descartes și Spinoza'], a: 0, e: 'Jeremy Bentham și John Stuart Mill.' },
+          { q: 'Expresia „război al tuturor împotriva tuturor” descrie starea naturală la:', o: ['John Locke', 'Thomas Hobbes', 'Jean-Jacques Rousseau', 'John Rawls'], a: 1, e: 'Thomas Hobbes, în „Leviathan”.' },
+          { q: 'Lucrarea „Contractul social” a fost scrisă de:', o: ['Jean-Jacques Rousseau', 'Voltaire', 'Montesquieu', 'Hobbes'], a: 0, e: 'Rousseau, 1762.' },
+          { q: 'Ideea că mintea la naștere este o „tabula rasa” aparține lui:', o: ['Descartes', 'John Locke', 'Platon', 'Kant'], a: 1, e: 'Empirismul lui Locke: toate cunoștințele provin din experiență.' },
+          { q: 'Ramura filosofiei care studiază cunoașterea este:', o: ['etica', 'estetica', 'gnoseologia (epistemologia)', 'ontologia'], a: 2, e: 'Ontologia studiază existența, etica – morala, estetica – frumosul.' },
+          { q: 'Conceptul de „văl al ignoranței” aparține lui:', o: ['John Rawls', 'Robert Nozick', 'Karl Marx', 'Aristotel'], a: 0, e: 'În „O teorie a dreptății” (1971).' },
+          { q: 'Distincția dintre libertatea negativă și libertatea pozitivă a fost formulată de:', o: ['Isaiah Berlin', 'John Locke', 'Immanuel Kant', 'Platon'], a: 0, e: 'În eseul „Două concepte de libertate” (1958).' },
+          { q: 'Afirmația „Dumnezeu este mort” aparține lui:', o: ['Søren Kierkegaard', 'Friedrich Nietzsche', 'Jean-Paul Sartre', 'Hegel'], a: 1, e: 'Nietzsche, în „Știința voioasă” și „Așa grăit-a Zarathustra”.' },
+          { q: 'Aristotel a fost discipolul lui:', o: ['Socrate', 'Platon', 'Pitagora', 'Thales'], a: 1, e: 'Aristotel a studiat la Academia lui Platon aproape 20 de ani.' },
+          { q: 'Etica virtuții, centrată pe caracter și pe „calea de mijloc”, îi aparține lui:', o: ['Aristotel', 'Kant', 'Mill', 'Hobbes'], a: 0, e: 'În „Etica nicomahică”, virtutea este media dintre două extreme.' }
+        ]
+      },
+      {
+        id: 'bac-engleza', name: 'Limba engleză', icon: '🇬🇧', color: '#457b9d',
+        questions: [
+          { q: 'She ___ to school every day.', o: ['go', 'goes', 'going', 'gone'], a: 1, e: 'Present Simple, persoana a III-a singular: verb + -s/-es.' },
+          { q: 'If I ___ rich, I would travel around the world.', o: ['am', 'were', 'will be', 'have been'], a: 1, e: 'Condiționalul de tip II: If + Past Simple („were” pentru toate persoanele).' },
+          { q: 'I have lived here ___ 2015.', o: ['for', 'since', 'from', 'during'], a: 1, e: '„Since” + moment de început; „for” + perioadă.' },
+          { q: 'The past tense of the verb „to go” is:', o: ['goed', 'went', 'gone', 'going'], a: 1, e: 'Verb neregulat: go – went – gone.' },
+          { q: 'The letter ___ yesterday.', o: ['was written', 'is written', 'wrote', 'has written'], a: 0, e: 'Diateza pasivă la Past Simple: was/were + participiu trecut.' },
+          { q: 'This book is ___ than the other one.', o: ['good', 'gooder', 'better', 'best'], a: 2, e: 'Comparativul neregulat: good – better – the best.' },
+          { q: 'He is interested ___ music.', o: ['on', 'in', 'at', 'for'], a: 1, e: 'Construcția fixă: interested in.' },
+          { q: 'By the time we arrived, the film ___.', o: ['already started', 'has already started', 'had already started', 'starts'], a: 2, e: 'Past Perfect: o acțiune trecută încheiată înaintea alteia trecute.' },
+          { q: 'A synonym for „huge” is:', o: ['tiny', 'enormous', 'narrow', 'weak'], a: 1, e: 'Huge = enormous = very big.' },
+          { q: 'There isn’t ___ milk left in the fridge.', o: ['some', 'any', 'many', 'a'], a: 1, e: '„Any” se folosește în propoziții negative și interogative.' },
+          { q: 'You’re coming to the party, ___?', o: ['are you', 'aren’t you', 'don’t you', 'isn’t it'], a: 1, e: 'Question tag: propoziție afirmativă → întrebare negativă cu același auxiliar.' },
+          { q: 'I look forward to ___ you soon.', o: ['see', 'seeing', 'saw', 'be seen'], a: 1, e: '„Look forward to” este urmat de forma -ing.' },
+          { q: 'She has been working here ___ three years.', o: ['since', 'for', 'ago', 'by'], a: 1, e: '„For” + durată (three years).' },
+          { q: 'The man ___ car was stolen called the police.', o: ['who', 'which', 'whose', 'whom'], a: 2, e: '„Whose” exprimă posesia în propozițiile relative.' }
+        ]
+      }
+    ]
+  };
+})(typeof globalThis !== 'undefined' ? globalThis : window);
