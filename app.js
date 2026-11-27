@@ -303,6 +303,14 @@
   renderHistory();
 
   if ('serviceWorker' in navigator && location.protocol !== 'file:') {
-    navigator.serviceWorker.register('sw.js').catch(() => {});
+    // La o versiune nouă a aplicației, reîncarcă pagina o singură dată.
+    const hadController = !!navigator.serviceWorker.controller;
+    let reloaded = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (hadController && !reloaded) { reloaded = true; location.reload(); }
+    });
+    navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' })
+      .then((reg) => reg.update())
+      .catch(() => {});
   }
 })();
