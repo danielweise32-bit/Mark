@@ -3,51 +3,83 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#1f8a4c">
+  <meta name="theme-color" content="#0f7a43">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>NutriScan</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>🥗 NutriScan</h1>
-    <p class="sub">Scanează un produs și vezi scorul nutrițional</p>
+  <div class="hero-bg" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <img src="icon.svg" alt="" width="36" height="36">
+      <span>NutriScan</span>
+    </div>
   </header>
 
   <main>
-    <section id="scanner" class="card">
-      <div id="video-wrap" hidden>
-        <video id="video" playsinline muted></video>
-        <div class="frame"></div>
-      </div>
-      <button id="scan-btn" class="primary">📷 Scanează codul de bare</button>
-      <button id="stop-btn" class="secondary" hidden>Oprește camera</button>
-      <form id="manual" autocomplete="off">
-        <input id="code-input" inputmode="numeric" pattern="[0-9]{6,14}" placeholder="sau introdu codul (ex. 5449000000996)">
-        <button type="submit" class="secondary">Caută</button>
+    <!-- Ecran principal -->
+    <section id="home" class="home">
+      <h1>Ce mănânci,<br><span>de fapt?</span></h1>
+      <p class="lead">Scanează codul de bare și află în câteva secunde cât de sănătos este produsul.</p>
+
+      <button id="scan-btn" class="scan-cta" aria-label="Scanează codul de bare">
+        <span class="pulse"></span>
+        <svg viewBox="0 0 24 24" width="38" height="38" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2M7 8v8M10 8v8M13 8v8M17 8v8"/></svg>
+        <strong>Scanează</strong>
+      </button>
+
+      <form id="manual" class="search" autocomplete="off">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="code-input" inputmode="numeric" placeholder="Introdu codul de bare" aria-label="Cod de bare">
+        <button type="submit" aria-label="Caută">→</button>
       </form>
       <p id="status" class="status" role="status"></p>
     </section>
 
-    <section id="result" class="card" hidden></section>
+    <!-- Rezultat -->
+    <section id="result" class="result" hidden></section>
 
-    <section id="history-card" class="card" hidden>
-      <div class="row-between">
-        <h2>Istoric</h2>
-        <button id="clear-history" class="link">Șterge</button>
+    <!-- Istoric -->
+    <section id="history-card" class="panel" hidden>
+      <div class="panel-head">
+        <h2>Scanate recent</h2>
+        <button id="clear-history" class="ghost">Șterge</button>
       </div>
-      <ul id="history"></ul>
+      <ul id="history" class="history"></ul>
+    </section>
+
+    <section class="panel how">
+      <h2>Cum funcționează scorul</h2>
+      <div class="how-grid">
+        <div><b>Nutri-Score</b><span>Sistemul oficial european A–E, din zahăr, grăsimi, sare, fibre și proteine.</span></div>
+        <div><b>Procesare</b><span>Clasificarea NOVA: alimentele ultra-procesate pierd puncte.</span></div>
+        <div><b>Aditivi</b><span>Mulți aditivi scad scorul general.</span></div>
+      </div>
     </section>
   </main>
 
+  <!-- Scaner pe tot ecranul -->
+  <div id="scanner" class="scanner" hidden>
+    <video id="video" playsinline muted></video>
+    <div class="scan-frame"><i></i><i></i><i></i><i></i><div class="laser"></div></div>
+    <p class="scan-hint">Încadrează codul de bare în chenar</p>
+    <button id="stop-btn" class="scan-close" aria-label="Închide camera">✕</button>
+  </div>
+
   <footer>
-    Date: <a href="https://world.openfoodfacts.org" target="_blank" rel="noopener">Open Food Facts</a> (ODbL).
-    Scorurile sunt informative și nu înlocuiesc sfatul unui specialist.
+    Date de la <a href="https://world.openfoodfacts.org" target="_blank" rel="noopener">Open Food Facts</a> (ODbL).
+    Informațiile sunt orientative și nu înlocuiesc sfatul unui specialist.
   </footer>
 
   <script src="vendor/zxing.min.js" defer></script>
   <script src="nutriscore.js" defer></script>
+  <script src="insights.js" defer></script>
   <script src="app.js" defer></script>
 </body>
 </html>

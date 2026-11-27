@@ -6,6 +6,8 @@ Aplicație web (PWA) pentru telefon: scanezi codul de bare al unui produs alimen
 
 - **Scanare cu camera**: folosește detectorul nativ al browserului (Chrome/Android) sau biblioteca ZXing ca rezervă (Safari/iPhone). Codul se poate introduce și manual.
 - **Nutri-Score A–E**: îl preia de la [Open Food Facts](https://world.openfoodfacts.org). Dacă produsul nu are un scor oficial, aplicația îl **calculează** din valorile nutriționale (algoritmul Nutri-Score 2023, pentru alimente și băuturi).
+- **Scor general 0–100** (Excelent / Bun / Mediocru / Slab), calculat din Nutri-Score, gradul de procesare și numărul de aditivi.
+- **Avantaje și dezavantaje** pentru fiecare produs: zahăr, grăsimi, sare, calorii, fibre, proteine, fructe și legume, procesare, aditivi, îndulcitori, ulei de palmier, cu procentul din doza zilnică de referință.
 - **Grad de procesare NOVA** (1–4) și numărul de aditivi.
 - **Valori nutriționale la 100 g**, cu semafor (scăzut / moderat / ridicat) pentru grăsimi, grăsimi saturate, zaharuri și sare.
 - Alergeni, lista de ingrediente și **istoric** al produselor scanate (păstrat pe dispozitiv).
@@ -33,6 +35,7 @@ npm test           # teste pentru calculul Nutri-Score
 | `index.html`, `style.css` | Interfața |
 | `app.js` | Scanare, căutare produs, afișare, istoric |
 | `nutriscore.js` | Calculul Nutri-Score 2023 |
+| `insights.js` | Scor general 0–100, avantaje și dezavantaje |
 | `sw.js`, `manifest.webmanifest`, `icon.svg` | Funcționalitate PWA (instalare, offline) |
 | `vendor/zxing.min.js` | Biblioteca de scanare ZXing (Apache-2.0) |
 
