@@ -52,6 +52,8 @@ npm test           # teste pentru calculul Nutri-Score
 Site separat, în folderul [`grile/`](grile/), cu teste grilă pentru **Evaluarea Națională** (clasa a VIII-a: română, matematică) și **Bacalaureat** (română, matematică, istorie, geografie, biologie, chimie, fizică, informatică, logică, psihologie, economie, sociologie, filosofie, engleză).
 
 - **Două moduri:** *Antrenament* (vezi imediat răspunsul corect și explicația) și *Simulare de examen* (cronometru, poți reveni la întrebări, notă la final).
+- **🔥 Mod Hard:** întrebări mai grele (în stilul subiectelor de examen, scrise pentru exersare, nu copiate din subiectele oficiale), 3 vieți, 60 de secunde pe întrebare, puncte cu bonus de combo și viteză, record personal.
+- **Animații:** tranziții între pagini, carduri care se înclină după cursor, particule și combo la răspunsuri corecte, confetti, scântei în modul Hard, sunete opționale. Se pot opri din „Personalizare” (și se opresc automat dacă sistemul cere mișcare redusă).
 - **Greșelile mele:** întrebările greșite se salvează automat și dispar când le rezolvi corect.
 - **Progres:** teste date, procent pe materii, serie de zile, istoric.
 - **Personalizare:** nume și avatar, 7 teme (inclusiv întunecat și automat), orice culoare de accent, font, mărimea textului, colțuri rotunjite, spațiere, animații.
@@ -60,5 +62,5 @@ Site separat, în folderul [`grile/`](grile/), cu teste grilă pentru **Evaluare
 
 Pe GitHub Pages site-ul e la `https://<utilizator>.github.io/<repo>/grile/`. Local: `npm start` și deschide `http://localhost:8080/grile/`.
 
-**Adăugarea întrebărilor în site:** editează `grile/data-en.js` sau `grile/data-bac.js`. Fiecare întrebare are forma
+**Adăugarea întrebărilor în site:** editează `grile/data-en.js`, `grile/data-bac.js` sau, pentru modul Hard, `grile/data-hard.js`. Fiecare întrebare are forma
 `{ q: 'Enunț', o: ['A', 'B', 'C', 'D'], a: 0, e: 'Explicație' }`, unde `a` este indexul variantei corecte (0 = prima). `npm test` verifică dacă toate întrebările sunt valide.
