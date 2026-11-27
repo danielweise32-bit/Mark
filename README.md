@@ -44,3 +44,21 @@ npm test           # teste pentru calculul Nutri-Score
 - Datele vin de la Open Food Facts (licență ODbL), o bază de date colaborativă: unele produse pot lipsi sau pot avea date incomplete.
 - Scorul calculat local este o estimare: pentru categorii speciale (uleiuri, nuci, brânzeturi) algoritmul oficial are reguli suplimentare.
 - Informațiile sunt orientative și nu înlocuiesc sfatul unui medic sau nutriționist.
+
+---
+
+# 📝 Grila Mea – teste grilă pentru EN și BAC
+
+Site separat, în folderul [`grile/`](grile/), cu teste grilă pentru **Evaluarea Națională** (clasa a VIII-a: română, matematică) și **Bacalaureat** (română, matematică, istorie, geografie, biologie, chimie, fizică, informatică, logică, psihologie, economie, sociologie, filosofie, engleză).
+
+- **Două moduri:** *Antrenament* (vezi imediat răspunsul corect și explicația) și *Simulare de examen* (cronometru, poți reveni la întrebări, notă la final).
+- **Greșelile mele:** întrebările greșite se salvează automat și dispar când le rezolvi corect.
+- **Progres:** teste date, procent pe materii, serie de zile, istoric.
+- **Personalizare:** nume și avatar, 7 teme (inclusiv întunecat și automat), orice culoare de accent, font, mărimea textului, colțuri rotunjite, spațiere, animații.
+- **Grilele mele:** îți creezi propriile materii și întrebări; import/export JSON ca să faci schimb cu colegii.
+- Copie de siguranță a datelor (export/import). Totul se păstrează doar în browser.
+
+Pe GitHub Pages site-ul e la `https://<utilizator>.github.io/<repo>/grile/`. Local: `npm start` și deschide `http://localhost:8080/grile/`.
+
+**Adăugarea întrebărilor în site:** editează `grile/data-en.js` sau `grile/data-bac.js`. Fiecare întrebare are forma
+`{ q: 'Enunț', o: ['A', 'B', 'C', 'D'], a: 0, e: 'Explicație' }`, unde `a` este indexul variantei corecte (0 = prima). `npm test` verifică dacă toate întrebările sunt valide.
